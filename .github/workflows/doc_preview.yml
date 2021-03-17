@@ -2,10 +2,10 @@ name: doc-preview
 
 on:
   push:
-    branches-ignore:
-      - master
     paths:
       - 'docs/**'
+    branches-ignore:
+      - master
 
   schedule:
     - cron: '1 0 * * 0'
