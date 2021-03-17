@@ -28,6 +28,7 @@ jobs:
       - name: Build Sphinx Documentation
         shell: bash -l {0}
         run: |
+          cd docs
           make html
 
       - name: Extract branch name
