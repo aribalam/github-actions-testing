@@ -13,3 +13,7 @@ jobs:
       - name: Print commit message
         shell: bash
         run: echo "${{ github.event.head_commit.message }}"
+
+      - name: Print branch name
+        shell: bash
+        run: echo "${{ toJSON(github.ref) }}"
