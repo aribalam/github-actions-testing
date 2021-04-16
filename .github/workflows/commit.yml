@@ -12,4 +12,4 @@ jobs:
 
       - name: Print commit message
         shell: bash
-        run: echo "${{github.event.commit_head.message}}"
+        run: echo "${{ toJSON(github.event) }}"
