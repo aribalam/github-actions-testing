@@ -7,7 +7,7 @@ jobs:
   print-commit-message:
     runs-on: ubuntu-latest
 
-    if: github.repository_owner == 'aribalam' && contains(github.event.head_commit.message, '[build_docs]')
+    if: github.repository_owner == 'aribalam' && (contains(github.ref, 'doc') || contains(github.event.head_commit.message, '[build_docs]'))
 
     steps:
       - uses: actions/checkout@v2
